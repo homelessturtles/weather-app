@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="sky-night"></div>
+    <div class="sky-day hideday"></div>
+    <div class="sky-rain hideskyrain"></div>
+    <div class="background">
+        <img src="./assets/Rain.svg" alt="" class="rain hiderain">
+        <img src="./assets/vclouds.svg" alt="" class="vclouds hidevclouds">
+        <img src="./assets/lilclouds.svg" alt="" class="lilclouds hidelilclouds">
+        <img src="./assets/Snow.svg" alt="" class="snow hidesnow">
+        <img src="./assets/Lightning.svg" alt="" class="lightning hidelightning">
+        <img src="./assets/Moon.svg" alt="" class="moon">
+        <img src="./assets/Sun.svg" alt="" class="sun hidesun">
+        <img src="./assets/Stars.svg" alt="" class="stars">
+        <img src="./assets/Hills.svg" alt="" class="night-hills">
+        <img src="./assets/HillsDay.svg" alt="" class="day-hills hidedayhills">
+    </div>
+    <div class="weather-main">
+        <div class="search">
+            <form id="search-form">
+                <label for="city-search"><img src="./assets/search.svg" alt=""></label>
+                <input type="text" id="city-search" placeholder="San Francisco..." autocomplete="off">
+            </form>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="location-container">
+                    <img src="./assets/location.svg" alt="" class="pin">
+                    <p class="city"></p>
+                </div>
+                <h1 class="temp"></h1>
+                <h2 class="desc"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
