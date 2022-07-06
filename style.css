@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    overflow: hidden;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: #4c4f64;
+}
+
+/*
+
+BACKGROUND SCENE
+
+*/
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.stars{
+    opacity: 1;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 10%;
+    transition: opacity 1s linear;
+}
+.stars.hidestars{
+    opacity: 0;
+}
+
+.sky-night{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1B1C2D 0%, #040720 100%);
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 1s linear;
+}
+.sky-night.hidenight{
+    opacity: 0;
+}
+.sky-day{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #6F8BBB 0%, #AFC9E1 100%);
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 1s linear;
+}
+.sky-day.hideday{
+    opacity: 0;
+}
+.sky-rain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #335896 0%, #AFC9E1 100%);    
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 1s linear;
+}
+.sky-rain.hideskyrain{
+    opacity: 0;
+}
+
+.moon{
+    position: absolute;
+    right: 7%;
+    top: 5%;
+    width: 15rem;
+    z-index: 2;
+    transition: top 1s linear
+}
+.moon.hidemoon{
+    top: -30rem;
+}
+
+.sun{
+    position: absolute;
+    right: 7%;
+    top: 5%;
+    width: 13rem;
+    z-index: 2;
+    transition: top 1s linear;
+}
+
+.sun.hidesun{
+    top: -30rem;
+}
+
+.night-hills{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: bottom 1s linear;
+}
+.night-hills.hidenighthills{
+    bottom: -100rem
+}
+
+.day-hills{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: bottom 1s linear;
+}
+.day-hills.hidedayhills{
+    bottom: -100rem
+}
+
+/*
+
+SEARCH + WEATHER CONTENT
+
+*/
+
+.weather-main{
+    font-size: 2rem;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+}
+
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100vw;
+    padding: 0 2rem;
+}
+
+.search > form{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 3rem;
+    width: 33rem;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+.search > form > input{
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    border-style: none;
+    font-size: 1.1rem;
+}
+
+.search > form > input:focus{
+    outline: none;
+}
+
+.search > form > label > img {
+    width: 1.5rem;
+}
+
+.info{
+    display: flex;
+    flex: 5;
+    align-items: center;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.info > .container{ 
+    background-color: rgb(222, 222, 222);
+    color: #1e1f21;
+    padding: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-container{
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.pin{
+    width: 2rem;
+}
+
+.city{
+    display: inline-block;
+}
+
+.rain{
+    position: absolute;
+    top: 10rem;
+    width: 100vw;
+    transition: all 1s linear;
+}
+.hiderain{
+    opacity: 0;
+    top: -100rem;
+}
+.vclouds{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
+    transition: all 1s linear;
+}
+.hidevclouds{
+    opacity: 0;
+    top: -100rem;
+}
+.lilclouds{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
+    transition: all 1s linear;
+}
+.hidelilclouds{
+    opacity: 0;
+    top: -100rem;
+}
+.snow{
+    position: absolute;
+    top: 10rem;
+    width: 100vw;
+    transition: all 1s linear;
+}
+.hidesnow{
+    opacity: 0;
+    top: -100rem;
+}
+.lightning{
+    position: absolute;
+    z-index: -1;
+    top: 10rem;
+    width: 100vw;
+    transition: all 1s linear;
+}
+.hidelightning{
+    opacity: 0;
+    top: -100rem;
+}
+
+@media screen and (max-width: 645px){
+    .info > .container{
+        padding: 4rem 2rem;
+    }
+}
